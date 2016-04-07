@@ -56,14 +56,16 @@
 
 /* On-board crystal frequency is 8MHz (HSE) */
 
-#define STM32_BOARD_XTAL        8000000ul
+#define STM32_BOARD_XTAL        24000000ul
 
 /* PLL source is HSE / 1, PLL multiplier is 9: PLL output frequency is 8MHz (XTAL) x 6 = 48MHz */
 
 #define STM32_CFGR_PLLSRC       RCC_CFGR_PLLSRC
 #define STM32_CFGR_PLLXTPRE     0
-#define STM32_CFGR_PLLMUL       RCC_CFGR_PLLMUL_CLKx6
-#define STM32_PLL_FREQUENCY     (6 * STM32_BOARD_XTAL)
+#define STM32_CFGR_PLLMUL       RCC_CFGR_PLLMUL_CLKx2
+#define STM32_PLL_FREQUENCY     STM32_BOARD_XTAL
+
+#define STM32_CFGR2_PREDIV1 RCC_CFGR2_PREDIV1d1
 
 /* Use the PLL and set the SYSCLK source to be the PLL */
 

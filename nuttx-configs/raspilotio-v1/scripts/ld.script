@@ -103,6 +103,7 @@ SECTIONS
 		*(.gnu.linkonce.d.*)
 		CONSTRUCTORS
 		_edata = ABSOLUTE(.);
+		. = ALIGN(4);
 	} > sram AT > flash
 
 	.bss : {

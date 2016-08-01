@@ -14,15 +14,14 @@ This repository holds the [PX4 Pro](http://px4.io) port for [Erle-Brain2](http:/
 
 3. upload firmware though ssh 
    * On your computer: 
-   
+
    		* `export AUTOPILOT_HOST=[ip]`
    		* `export AUTOPILOT_USER=erle`
    		* `make posix_erlebrain2_release upload`
 
 4. before PX4 got run, it need create working directory.
 	* On the Erle-Brain 2: 
-
-   		*`mkdir -p /home/erle/px4/eeprom`
-   		*`mkdir -p /home/erle/px4/fs`
+   		* `mkdir -p /home/erle/px4/eeprom`
+   		* `mkdir -p /home/erle/px4/fs`
 5. run
    * `sudo ./mainapp`

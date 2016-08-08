@@ -9,14 +9,16 @@ This repository holds the [PX4 Pro](http://px4.io) port for [Erle-Brain2](http:/
    * `cd rpi_toolchain`
    * `./install_cross.sh`
 
-2. make firmware
-	2.1 cmake version, only first time:
+2. make firmware:
+
+	* 2.1 cmake version, only first time:
+
 	   * `wget https://cmake.org/files/v3.4/cmake-3.4.3-Linux-x86_64.sh`
 	   * `chmod +x cmake-3.4.3-Linux-x86_64.sh`
 	   * `sudo mkdir /opt/cmake-3.4.3`
 	   * `sudo ./cmake-3.4.3-Linux-x86_64.sh --prefix=/opt/cmake-3.4.3 --exclude-subdir`
-   * `export PATH=/opt/cmake-3.4.3/bin:$PATH`
-   * `make posix_erlebrain2_release` 
+* `export PATH=/opt/cmake-3.4.3/bin:$PATH`
+* `make posix_erlebrain2_release` 
 
 3. upload firmware though ssh 
    * On your computer: 
